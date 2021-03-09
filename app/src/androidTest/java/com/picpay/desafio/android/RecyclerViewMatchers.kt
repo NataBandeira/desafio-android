@@ -11,9 +11,7 @@ import org.hamcrest.Matcher
 
 object RecyclerViewMatchers {
 
-    fun atPosition(
-        position: Int,
-        itemMatcher: Matcher<View>
+    fun atPosition( position: Int, itemMatcher: Matcher<View>
     ) = object : BoundedMatcher<View, RecyclerView>(RecyclerView::class.java) {
         override fun describeTo(description: Description?) {
             description?.appendText("has item at position $position: ")
